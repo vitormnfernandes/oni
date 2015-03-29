@@ -19,14 +19,14 @@ struct item {
 	string nome;
 };
 
-//quicksort adapted from
+//quicksort adapteda de
 //http://en.wikipedia.org/wiki/Quicksort
 int partition(struct item A[], int lo, int hi)
 {
 	int pivotIndex = lo; //como melhorar?
 	int pivotValue = A[pivotIndex].soma;
 	string pivotValue2 = A[pivotIndex].nome;
-	//put the chosen pivot at A[hi] //pivot fica em hi!
+	//put the chosen pivot at A[hi] //o pivot fica em hi!
 	swap(A[pivotIndex], A[hi]);
 	int storeIndex = lo;
 	// compare remaining array elements against pivotValue = A[hi]
@@ -38,7 +38,7 @@ int partition(struct item A[], int lo, int hi)
 			storeIndex++;
 		}
 		//segunda ordenacao em caso de empate...
-		else if(A[i].soma == pivotValue) // empates temos de ordenar por nome!
+		else if(A[i].soma == pivotValue) //nos empates temos de ordenar por nome!
 		{
 			if(A[i].nome.compare(pivotValue2) < 0 ) //ordem crescente
 			{
