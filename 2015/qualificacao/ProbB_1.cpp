@@ -47,7 +47,6 @@ int main()
 				//so funciona quando c >= 3!
 				for (int i2 = i1 + 2; i2 < n; i2++) //garantir 1 particula no meio 
 				{
-					cout << i2 << ".";
 					if(p[i1] == p[i2]) //temos um intervalo para testar
 					{
 						particula = p[i1];
