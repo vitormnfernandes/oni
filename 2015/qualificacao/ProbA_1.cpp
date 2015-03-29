@@ -19,7 +19,7 @@ struct item {
 	string nome;
 };
 
-//quicksort adapteda de
+//quicksort adaptado de
 //http://en.wikipedia.org/wiki/Quicksort
 int partition(struct item A[], int lo, int hi)
 {
@@ -29,7 +29,7 @@ int partition(struct item A[], int lo, int hi)
 	//put the chosen pivot at A[hi] //o pivot fica em hi!
 	swap(A[pivotIndex], A[hi]);
 	int storeIndex = lo;
-	// compare remaining array elements against pivotValue = A[hi]
+	//compare remaining array elements against pivotValue = A[hi]
 	for(int i = lo; i < hi; i++)
 	{
 		if(A[i].soma > pivotValue) //ordem decrescente
