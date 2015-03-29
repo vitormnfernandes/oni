@@ -1,0 +1,206 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+
+<style>
+.aviso {
+  background-color: #f2dede; 
+  border:black dashed 1px; 
+  padding:6px; 
+  vertical-align: middle;
+}
+
+code {
+  background-color:#F8F8FF;
+  border:black dashed 1px; 
+  padding:6px; 
+}
+
+</style>
+
+<h1><font color="blue">Problema D - Teste de Força</font></h1>
+
+<p><img src="ProbD.gif" alt="" align="right" border="1" height="400px"> 
+</p><div class="aviso">
+Este é um <b>problema de interação</b>. <br>
+Ao contrário dos outros problemas em que deves fazer leitura de dados e 
+escrita do output, neste problema deves interagir com o avaliador 
+através da implementação de uma função e da interação com as funções 
+fornecidas.
+</div>
+
+<p>Uma das atrações mais conhecidas nas feiras populares é a máquina de 
+teste de força, onde jovens que querem impressionar as namoradas tentam 
+fazer subir um peso e tocar um sino com a batida de um martelo.</p>
+
+<p>Esta semana, a empresa ONI (Obras Nada Inteligentes) foi contratada 
+para um serviço muito peculiar. O seu cliente queixa-se que ultimamente,
+ além de fazer tocar o sino, os concorrentes estão a conseguir parti-lo!
+ As despesas com a sua reparação são incomportáveis e a ONI foi 
+contratada para descobrir qual a força necessária para o sino partir. O 
+problema é que o cliente tem um número muito limitado de sinos 
+disponíveis e exige que o teste seja feito rapidamente para não perder 
+clientela. Consegues ajudar a ONI?</p>
+
+<h2><font color="blue">O Problema</font></h2>
+Dado o limite máximo de força <b>N</b> que a ONI consegue exercer e o
+número de sinos <b>K</b> que a ONI tem disponíveis (no máximo 3), a
+tua tarefa é descobrir a força mínima (um inteiro entre 1 e <b>N</b>) que faz partir o sino usando o menor número de pancadas possíveis.
+
+<h2><font color="blue">Ficheiros para Download</font></h2>
+<p>Podes começar por descarregar os ficheiros correspondentes à tua
+  linguagem (ou um <a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/testedeforca.zip">arquivo zip</a> contendo tudo):</p>
+
+<table bgcolor="black">
+<tbody><tr bgcolor="#bbbbbb">
+<td>Linguagem</td>
+<td>Ficheiro a implementar</td>
+<td>Ficheiro com avaliador exemplo</td>
+<td>Ficheiros auxiliares</td>
+<td>Input para avaliador exemplo</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>C</td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/resolver.c">resolver.c</a></tt></td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/avaliador.c">avaliador.c</a></tt></td>
+<td rowspan="2"><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/martelada.h">martelada.h</a></tt></td>
+<td rowspan="4"><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/input.txt">input.txt</a></tt></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>C++</td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/resolver.cpp">resolver.cpp</a></tt></td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/avaliador.cpp">avaliador.cpp</a></tt></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Java</td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/resolver.java">resolver.java</a></tt></td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/avaliador.java">avaliador.java</a></tt></td>
+<td>------</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Pascal</td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/resolver.pas">resolver.pas</a></tt></td>
+<td><tt><a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/avaliador.pas">avaliador.pas</a></tt></td>
+<td>------</td></tr>
+</tbody></table>
+
+<h2><font color="blue">Implementação</font></h2>
+<p>Deves submeter um único ficheiro que implementa a
+  função <code>resolver(N, K)</code>, que recebe dois números inteiros
+  (a força máxima <b>N</b> e o número de sinos <b>K</b>) e devolve a
+  menor força necessária para partir o sino. <b>Para isso deves usar o
+  ficheiro <tt>resolver.{c,cpp,java,pas}</tt> que descarregaste,
+  colocando no interior da função o teu código. Podes acrescentar
+  outras funções, mas devem ficar todas neste ficheiro que é o único
+  que deves submeter.</b>
+
+</p><p><b>Função a implementar:</b>
+<table margin="10" cellpadding="10">
+<tbody><tr><td>C/C++/Java:</td><td><code>int resolver(int N, int
+      K);</code></td></tr> 
+<tr><td>Pascal:</td><td><code>function resolver(N, K : integer): integer;</code></td></tr>
+</tbody></table>
+
+</p><p>A tua função deve invocar a função <code>martelada(f)</code> implementada pelo avaliador, que recebe um inteiro <b>f</b> com a força da martelada que pretendes testar e devolve 1 caso o sino seja partido e 0 caso o sino não seja partido.
+
+</p><p><b>Função do avaliador:</b>
+<table margin="10" cellpadding="10">
+<tbody><tr><td>C/C++/Java:</td><td><code>int martelada(int f);</code></td></tr>
+<tr><td>Pascal:</td><td><code>function martelada(f : integer): integer;</code></td></tr>
+</tbody></table>
+
+</p><p>O teu objectivo é descobrir o menor número inteiro <b>f</b> que permite partir o sino, mas lembra-te que só existem <b>K</b> sinos disponíveis. O programa será abortado caso a função seja invocada e não existirem mais sinos disponíveis.
+
+<b>A vossa função não deve ler nem escrever para os canais de entrada/saída padrão.</b>
+
+</p><h2><font color="blue">Exemplo</font></h2>
+
+Imagina que a força máxima é 10 e existem 2 sinos disponíveis. A
+função <tt>resolver</tt> que deves implementar será chamada
+como <code>resolver(10, 2)</code>. Vamos supor que o sino parte sempre
+que a força efetuada é igual ou superior a 4.  Uma possível execução
+seria a seguinte (com a ordem das chamadas a ser de cima para baixo):
+
+<p>
+</p><center>
+<table margin="10" bgcolor="black" border="1" cellpadding="10">
+<tbody><tr bgcolor="#bbbbbb"><td><b>Invocação</b></td><td><b>Resultado</b></td><td><b>Descrição</b></td></tr>
+<tr bgcolor="white"><td>martelada(7)</td><td>1</td><td>O sino partiu com a força 7, só existe mais um sino disponível.</td></tr>
+<tr bgcolor="white"><td>martelada(1)</td><td>0</td><td>O sino não partiu com a força 1.</td></tr>
+<tr bgcolor="white"><td>martelada(2)</td><td>0</td><td>O sino não partiu com a força 2.</td></tr>
+<tr bgcolor="white"><td>martelada(3)</td><td>0</td><td>O sino não partiu com a força 3.</td></tr>
+<tr bgcolor="white"><td>martelada(4)</td><td>1</td><td>O último sino partiu com a força 4.</td></tr>
+</tbody></table>
+</center>
+
+<p>A função <code>resolver(N,K)</code> deve retornar a resposta correta, que neste caso corresponde ao número inteiro 4.
+
+</p><h2><font color="blue">Restrições</font></h2>
+São garantidos os seguintes limites em todos os casos de teste:
+
+<table>
+<tbody><tr><td><b>1 ≤ N ≤ 100&nbsp;000</b></td><td>&nbsp; &nbsp; &nbsp;</td><td>Força máxima a considerar.</td></tr>
+<tr><td><b>1 ≤ K ≤ 3</b></td><td>&nbsp; &nbsp; &nbsp;</td><td>Número de sinos a considerar.</td></tr>
+</tbody></table>
+
+É também garantido que o sino sempre partirá com a força máxima e nunca partirá com força 0.
+
+<h2><font color="blue">Avaliação e Casos de Teste</font></h2>
+
+<p>Um caso de teste consiste em várias invocações da função <code>resolver(N,K)</code> com os mesmos parâmetros <b>N</b> e <b>K</b>,
+ variando unicamente a força necessária para partir o sino. A função 
+deve retornar o valor correto em todas as invocações para uma pontuação 
+ser atribuída nesse caso de teste.
+
+</p><p>A pontuação do caso de teste será dada pelo maior número de 
+marteladas que foram necessárias para descobrir a resposta após variar a
+ força necessária. Quanto menor o número de marteladas necessário, maior
+ a pontuação no caso de teste.
+
+</p><h2><font color="blue">Testes no vosso computador</font></h2>
+
+<p>É disponibilizado um avaliador exemplo em cada linguagem (<tt>avaliador.{c,cpp,java,pas}</tt>) que pode ser utilizado para testar a vossa submissão. <b>Este avaliador não corresponde ao utilizado pelo sistema de avaliação.</b>
+
+</p><p>Este avaliador começa por receber como input três números <b>N</b>, <b>K</b> e <b>C</b> correspondendo, respetivamente, à força máxima, ao número de sinos e ao número de casos de teste. Seguem-se <b>C</b> linhas, cada uma contendo 1 número inteiro <b>f<sub>i</sub></b> que indica a força mínima necessária para partir o sino.
+
+</p><p>O avaliador irá automaticamente invocar a
+  função <code>resolver(N,K)</code> por vocês implementada e indicará
+  se a resposta foi correta. Em caso afirmativo, também indicará o
+  número de marteladas que foram necessárias para a descobrir.
+
+</p><p>Disponibilizamos um
+  ficheiro <a href="http://mooshak.dcc.fc.up.pt/%7Eoni-judge/input.txt">input.txt</a>
+  que pode ser usado para testar todas as forças mínimas possíveis
+  para o caso em que <b>N</b>=10 e <b>K</b>=2.
+
+</p><p>Um exemplo de teste na tua máquina (supondo que tens os
+  compiladores oficiais instalados) seria o seguinte:</p>
+
+<table margin="10" bgcolor="black" cellpadding="10">
+<tbody><tr bgcolor="#bbbbbb"><td>Linguagem</td><td>Compilar</td><td>Executar
+    com o exemplo</td></tr>
+<tr bgcolor="white"><td>C</td>     <td><tt>gcc -Wall avaliador.c resolver.c</tt></td><td><tt>./a.out &lt; input.txt</tt></td></tr>
+<tr bgcolor="white"><td>C++</td>   <td><tt>g++ -Wall avaliador.cpp resolver.cpp</tt></td><td><tt>./a.out &lt; input.txt</tt></td></tr>
+<tr bgcolor="white"><td>Java</td>  <td><tt>javac avaliador.java resolver.java</tt></td><td><tt>java avaliador &lt; input.txt</tt></td></tr>
+<tr bgcolor="white"><td>Pascal</td><td><tt>fpc avaliador.pas</tt></td><td><tt>./avaliador &lt; input.txt</tt></td></tr>
+</tbody></table>
+
+<p>O output deve mostrar em que casos acertaram.
+
+    </p><hr size="2">
+    <center><b>Qualificação para a final das ONI'2015</b><br><i>(15/03 a 17/03 de 2015)</i></center>
+    <hr size="2">
+  
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+
+</body></html>
