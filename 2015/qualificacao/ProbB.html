@@ -1,0 +1,197 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="white">
+<center>
+<table cellpadding="20" width="100%">
+<tbody><tr>
+<td id="Base">
+
+    <h1><font color="blue">Problema B - Teoria de (Quase) Tudo</font></h1>
+
+    <p><img src="ProbB.jpg" alt="" align="right" border="1"> O físico
+      António prepara-se para mais um dia de trabalho no seu
+      laboratório de partículas. Desde bosões a fermiões, o que não faltam são
+      partículas para estudar! O objetivo do António para hoje é estudar a
+      estabilidade de partículas, ou seja, que partículas é
+      que não vão decair para outras.
+    </p>
+
+    <p>No laboratório ele tem exatamente <b>C</b> conjuntos
+      de <b>N</b> partículas seguidas numa linha cada um. Para
+      identificar o tipo de partícula (se é um neutrino muónico ou um
+      gluão, por exemplo), a cada partícula <i>i</i> de cada conjunto
+      é atribuído um inteiro positivo <b>p<sub>i</sub></b>. <b>Um par
+      de partículas de igual valor é considerado estável se todas as
+      partículas entre eles têm um valor que não dista mais do
+      que <i>D</i> em relação ao par</b>. Formalmente, duas
+      partículas nas posições <i>i</i> e <i>j</i> formam um par
+      estável se <b>p<sub>i</sub></b>=<b>p<sub>j</sub></b>
+      e |<b>p<sub>k</sub></b>-<b>p<sub>i</sub></b>|≤<b>D</b> para
+      qualquer <i>k</i> respeitando <i>i&lt;k&lt;j</i> .
+    </p>
+    
+
+    <p>António está mesmo interessado em conhecer a quantidade de
+      pares de partículas que são estáveis em cada conjunto. Vamos ver
+      um exemplo. Considera que existe um conjunto com as
+      seguintes <b>N</b> = 6 partículas:
+    </p>
+
+    <table cellspanning="1" bgcolor="black" border="0">
+    <tbody><tr>
+    <td textalign="left" bgcolor="BBBBBB">&nbsp;<i>i</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>1</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>2</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>3</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>4</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>5</i>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<i>6</i>&nbsp;</td>
+    </tr>
+    <tr>
+    <td bgcolor="#BBBBBB">&nbsp;<b>p<sub>i</sub></b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>1</b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>4</b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>1</b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>2</b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>1</b>&nbsp;</td>
+    <td bgcolor="#FFFFFF">&nbsp;<b>4</b>&nbsp;</td>
+    </tr>
+    </tbody></table>
+
+    <p>
+      Além disso sabe-se que <b>D</b> = 1 para este conjunto. Neste
+      caso há 4 pares de partículas iguais, dos quais apenas 1 é estável. São
+      eles:
+    </p>
+
+    <ul>
+      <li>Pares não estáveis: 
+      <ul>
+      <li>Posições 1 e 3 (ambas com valor 1): entre elas há apenas uma
+        partícula de valor 4, que não
+        está a distância <b>D</b> (|4-1|=3 &gt; 1).
+      </li>
+      
+      <li>Posições 1 e 5 (ambas com valor 1): entre elas há 4, um
+        2 e um 1. Destas, a partícula de <b>p</b> = 4 não está a distância
+        de <b>D</b> (|4-1|=3 &gt; 1).
+
+      </li><li>Posições 2 e 6 (ambas com valor 4): elas entre há um 1, um 2
+        e outro 1. Destas nenhuma está à
+        distância de <b>D</b> (|1-4|=3 &gt; 1 e |2-4|=2 &gt; 1).
+      </li>
+     </ul>
+     </li><li>Pares estáveis:
+     <ul>
+      <li>Posições 3 e 5 (ambas com valor 1): entre elas há apenas uma
+        partícula de valor 2, que está à distância necessária (|2-1|=1 ≤ 1).
+      </li>
+     </ul>
+    </li></ul>
+
+    <p>
+      O António rapidamente usou a equação de Dirac e a regra
+      de ouro de Fermi para calcular quantos pares de partículas são
+      estáveis por conjunto. Agora é a tua vez de calcular a resposta,
+      mostra que a Ciência de Computadores não é inferior à Física ou
+      o António irá gozar contigo para sempre!
+    </p>
+
+    <h2><font color="blue">O Problema</font></h2>
+
+    <p>
+      Dados <b>C</b> conjuntos de <b>N</b> partículas e os seus
+      respetivos valores, a tua tarefa é calcular, para cada
+      conjunto, a quantidade de pares de partículas do mesmo valor que
+      são estáveis, isto é, cujos valores das partículas entre elas
+      estão no máximo à distância <b>D</b> do valor do par.
+    </p>
+
+    <h2><font color="blue">Input</font></h2>
+
+    <p>
+      Na primeira linha vem um inteiro <b>C</b> que representa o
+      número de conjuntos.
+    </p>
+
+    <p>
+      Seguem-se <b>C</b> conjuntos de partículas. Cada conjunto começa
+      com uma linha com dois números inteiros <b>N</b> e <b>D</b>,
+      representando o número de partículas e a distância máxima para
+      garantir estabilidade. Seguem-se <b>N</b> inteiros onde
+      o <i>i</i>-ésimo representa o valor de <b>p<sub>i</sub></b>.
+    </p>
+
+    <h2><font color="blue">Output</font></h2>
+
+    <p>
+      O output contém <b>C</b> inteiros que representam o número de
+      pares estáveis por conjunto. Estes números serão inferiores a
+      2<sup>63</sup>.
+
+    </p><h2><font color="blue">Restrições</font></h2>
+
+    <p>São garantidos os seguintes limites em todos os casos de teste que
+      irão ser colocados ao programa:</p>
+
+    <table>
+      <tbody><tr>
+        <td><b>1 ≤ C ≤ 40</b></td>
+        <td>&nbsp; &nbsp; &nbsp;</td>
+        <td>Número de conjuntos</td>
+      </tr>
+      <tr>
+        <td><b>1 ≤ N ≤ 60&nbsp;000</b></td>
+        <td>&nbsp; &nbsp; &nbsp;</td>
+        <td>Número de partículas</td>
+      </tr>
+      <tr>
+        <td><b>1 ≤ D ≤ 1&nbsp;000&nbsp;000</b></td>
+        <td>&nbsp; &nbsp; &nbsp;</td>
+        <td>Distância de estabilidade</td>
+      </tr>
+      <tr>
+        <td><b>1 ≤ p<sub>i</sub> ≤ 1&nbsp;000&nbsp;000</b></td>
+        <td>&nbsp; &nbsp; &nbsp;</td>
+        <td>Inteiro atribuído a uma partícula</td>
+      </tr>
+    </tbody></table>
+
+    <h2><font color="blue">Nota sobre a avaliação</font></h2>
+
+    <p>Para um conjunto de casos de teste valendo 35% dos pontos, <b>N</b> ≤ 200.</p>
+    <p>Para um conjunto de casos de teste valendo 65% dos pontos, <b>N</b> ≤ 5&nbsp;000.</p>
+
+    <h2><font color="blue">Exemplo de Input 1</font></h2>
+    <pre>2
+6 1
+1 4 1 2 1 4
+10 2
+1 3 5 1 2 3 5 1 2 3</pre>
+
+    <h2><font color="blue">Exemplo de Output 1</font></h2>
+    <pre>1
+3</pre>
+
+    <h2><font color="blue">Exemplo de Input 2</font></h2>
+    <pre>2
+6 2
+1 4 1 2 1 4
+8 1
+1 2 1 2 1 2 1 2</pre>
+
+    <h2><font color="blue">Exemplo de Output 2</font></h2>
+    <pre>1
+12</pre>
+
+    <hr size="2">
+    <center><b>Qualificação para a final das ONI'2015</b><br><i>(15/03 a 17/03 de 2015)</i></center>
+    <hr size="2">
+  
+</td>
+</tr>
+</tbody></table>
+</center>
+
+</body></html>
