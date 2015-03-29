@@ -48,9 +48,12 @@ int main()
 				{
 					parse /= 10; //so funciona para parse > 9!
 					d2 = parse % 10;
-					if(d2 > d1){
+					if(d2 > d1)
+					{
 						up = true;
-					}else if(d2 < d1){
+					}
+					else if(d2 < d1)
+					{
 						down = true;
 					}
 					d1 = d2;
