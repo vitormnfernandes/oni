@@ -4,7 +4,7 @@
 * https://www.facebook.com/clubeinfotech
 * 
 * ONI2015 - Qualificacao
-* Problema A - Confus„o Classificativa
+* Problema A - Confus√£o Classificativa
 * Versao 1: Ordenacao com O(NlogN), usando o quicksort
 */
 
@@ -37,7 +37,7 @@ int partition(struct item A[], int lo, int hi)
 			swap(A[i], A[storeIndex]);
 			storeIndex++;
 		}
-		//segunda ordenacao em caso de empate...
+		//segunda comparacao em caso de empate...
 		else if(A[i].soma == pivotValue) //nos empates temos de ordenar por nome!
 		{
 			if(A[i].nome.compare(pivotValue2) < 0 ) //ordem crescente
