@@ -13,7 +13,7 @@
 
 using namespace std;
 
-//usando um estrutura simplificamos o processo de troca num unico array
+//usando uma estrutura simplificamos o processo de troca num unico array
 struct item {
 	int soma;
 	string nome;
