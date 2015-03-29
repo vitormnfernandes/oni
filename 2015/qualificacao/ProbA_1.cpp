@@ -1,11 +1,11 @@
 /**
 * Vitor M. N. Fernandes, vmnf@yahoo.com, 29/03/2015
-* InfoTech - Clube de Programação e Robótica
+* InfoTech - Clube de Programacao e Robotica
 * https://www.facebook.com/clubeinfotech
 * 
 * ONI2015 - Qualificacao
 * Problema A - Confusão Classificativa
-* Versão 1: Ingenua com O(NlogN)
+* Versao 1: Ordenacao com O(NlogN), usando o quicksort
 */
 
 #include <iostream>

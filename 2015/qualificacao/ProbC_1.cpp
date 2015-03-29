@@ -1,11 +1,11 @@
 /**
 * Vitor M. N. Fernandes, vmnf@yahoo.com, 29/03/2015
-* InfoTech - Clube de Programação e Robótica
+* InfoTech - Clube de Programacao e Robotica
 * https://www.facebook.com/clubeinfotech
 * 
 * ONI2015 - Qualificacao
 * Problema C - Numeros do Fogo
-* Versão 1: Ingenua com O(N^3)
+* Versao 1: Ingenua com O(N^3)
 */
 
 #include <iostream>
