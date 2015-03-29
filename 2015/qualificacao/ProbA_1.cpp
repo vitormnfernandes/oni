@@ -70,7 +70,6 @@ int main()
 	item* items;
 	//
 	int total, aux;
-	int lo, hi;
 	//
 	cin >> n;
 	cin >> nprob;
@@ -90,9 +89,7 @@ int main()
 	// Data loaded
 	// Algorithm: O(NlogN) ordenacao com um quicksort modificado
 	//
-	lo = 0;
-	hi = n - 1; //n concorrentes
-	quicksort(items, lo, hi);
+	quicksort(items, 0, n - 1);
 	//
 	for (int i = 0; i < n; i++) // quicksort (total: decrescente, nome: crescente)
 	{
